@@ -11,8 +11,8 @@ class IntroPage extends StatefulWidget {
 class _IntroPageState extends State<IntroPage> {
   final TextEditingController _nameController = TextEditingController();
   final _formKey = GlobalKey<FormState>();
-  final TextEditingController _password = TextEditingController();
-  final TextEditingController _legalSurname = TextEditingController();
+  final TextEditingController phoneNumber = TextEditingController();
+  final TextEditingController _religion = TextEditingController();
   final TextEditingController _passCode = TextEditingController();
 
   @override
@@ -46,11 +46,28 @@ class _IntroPageState extends State<IntroPage> {
                     ),
                     SizedBox(height: 20.0),
                     CustomTextInput(
-                        controller: _nameController,
-                        text: "Full legal name and Middle name"),
+                      controller: _nameController,
+                      text: "Full legal name and Middle name",
+                      isObscure: false,
+                      errorMessage: "Surname comes first",
+                    ),
                     SizedBox(height: 20.0),
                     CustomTextInput(
-                        controller: _passCode, text: "input your passcode")
+                      controller: _passCode,
+                      text: "input your passcode",
+                      isObscure: true,
+                      errorMessage:
+                          "Passcode should not be less than 8 characters ",
+                    ),
+                    SizedBox(height: 20.0),
+                    CustomTextInput(
+                      controller: _religion,
+                      text: 'input your religion',
+                    ),
+                    SizedBox(height: 20.0),
+                    CustomTextInput(
+                        controller: phoneNumber,
+                        text: 'input valid phone Number'),
                   ],
                 ),
               )),

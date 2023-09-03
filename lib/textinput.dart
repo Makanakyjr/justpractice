@@ -9,9 +9,9 @@ class CustomTextInput extends StatelessWidget {
   const CustomTextInput(
       {super.key,
       required this.controller,
-       this.errorMessage,
+      this.errorMessage,
       required this.text,
-       this.isObscure = false});
+      this.isObscure = false});
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +24,7 @@ class CustomTextInput extends StatelessWidget {
         hintTextDirection: TextDirection.ltr,
         hintText: text,
         border: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(30.0),
+          borderRadius: BorderRadius.circular(20.0),
         ),
       ),
       validator: (value) {
@@ -35,8 +35,6 @@ class CustomTextInput extends StatelessWidget {
         }
       },
       autovalidateMode: AutovalidateMode.onUserInteraction,
-      
     );
-    
   }
 }
