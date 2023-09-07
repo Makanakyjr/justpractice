@@ -101,7 +101,18 @@ class _IntroPageState extends State<IntroPage> {
                       textAlign: TextAlign.center,
                     ),
                     const SizedBox(
-                      height: 88,
+                      height: 20,
+                    ),
+                    Center(
+                      child: MaterialButton(
+                        onPressed: () {},
+                        height: 40,
+                        minWidth: (200.0),
+                        color: Colors.lightGreen,
+                        child: Text(
+                          "Sign up",
+                        ),
+                      ),
                     )
                   ],
                 ),
@@ -110,7 +121,7 @@ class _IntroPageState extends State<IntroPage> {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
-        backgroundColor: Colors.white38,
+        backgroundColor: Colors.black26,
         child: Icon(Icons.message_outlined),
       ),
     );
